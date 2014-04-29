@@ -1,5 +1,5 @@
-﻿using ESRI.ArcGIS.Client;
-using ESRI.ArcGIS.Client.Geometry;
+﻿
+using Esri.ArcGISRuntime.Controls;
 using Geo.Model;
 using Microsoft.Devices.Sensors;
 using Microsoft.Xna.Framework;

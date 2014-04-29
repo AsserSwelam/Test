@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ESRI.ArcGIS.Client;
-using ESRI.ArcGIS.Client.Geometry;
-using ESRI.ArcGIS.Client.Projection;
-using ESRI.ArcGIS.Client.Symbols;
 using System.Windows.Media;
 using Microsoft.Xna.Framework;
+using Esri.ArcGISRuntime.Controls;
+using Esri.ArcGISRuntime.Layers;
+using Esri.ArcGISRuntime.Geometry;
+using Esri.ArcGISRuntime.Symbology;
 
 namespace Geo.Model
 {
@@ -40,7 +40,7 @@ namespace Geo.Model
             _map = esriMap;
 
             ArcGISTiledMapServiceLayer layer = new ArcGISTiledMapServiceLayer();
-            layer.Url = "http://server.arcgisonline.com/arcgis/rest/services/ESRI_StreetMap_World_2D/MapServer";
+            layer.ServiceUri = "http://server.arcgisonline.com/arcgis/rest/services/ESRI_StreetMap_World_2D/MapServer";
 
             _myLocationLayer = new GraphicsLayer();
             _redliningGraphicsLayer = new GraphicsLayer();
@@ -49,7 +49,7 @@ namespace Geo.Model
             _map.Layers.Add(_redliningGraphicsLayer);
             _map.Layers.Add(_myLocationLayer);
 
-            _map.ExtentChanged += _map_ExtentChanged;
+            _map
 
             ////////Init DrawControl//////////
             _drawControl = new DrawControl(_map);
@@ -193,8 +193,8 @@ namespace Geo.Model
             pointGraphic.Geometry = new MapPoint(x, y);
 
             SimpleMarkerSymbol symbol = new SimpleMarkerSymbol();
-            symbol.Color = new SolidColorBrush(Colors.Red);
-            symbol.Style = SimpleMarkerSymbol.SimpleMarkerStyle.Diamond;
+            symbol.Color = Colors.Red;
+            symbol.Style = SimpleMarkerStyle.Diamond;
             symbol.Size = 20;
 
             pointGraphic.Symbol = symbol;
@@ -203,7 +203,7 @@ namespace Geo.Model
             _myLocationLayer.Graphics.Add(pointGraphic);
 
 
-            _map.ZoomTo(GetCenterExtent(pointGraphic.Geometry as MapPoint));
+            //_map.ZoomTo(GetCenterExtent(pointGraphic.Geometry as MapPoint));
         }
 
         public void ClearGraphicsLayer()

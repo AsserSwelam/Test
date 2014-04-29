@@ -1,0 +1,8 @@
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\Geo.csprojResolveAssemblyReference.cache
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\App.g.cs
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\MainPage.g.cs
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\View\MeasurSettPage.g.cs
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\View\RedSetPivotPage.g.cs
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\Geo.g.resources
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\Geo.Resources.AppResources.resources
+C:\Users\asse7505\Documents\Test\Geo\obj\x86\Debug\Geo.csproj.GenerateResource.Cache
